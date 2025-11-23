@@ -7,9 +7,11 @@ on:
 jobs:
   build-jar:
     # Este job roda dentro de um container Maven (usa contêiner na pipeline)
+    # Observação: tag anterior (maven:3.8.8-jdk-17) não existia -> causava 'manifest unknown'
+    # Usamos uma tag suportada pelo repositório oficial do Maven
     runs-on: ubuntu-latest
     container:
-      image: maven:3.8.8-jdk-17
+      image: maven:3.9.4-eclipse-temurin-17
 
     steps:
       - name: Checkout
