@@ -1,4 +1,4 @@
-FROM maven:3.9.9-eclipse-temurin-21 AS build
+FROM maven:3.9.9-eclipse-temurin-17 AS build
 
 # Define pasta de trabalho dentro do container
 WORKDIR /app
@@ -11,7 +11,7 @@ RUN mvn clean package -DskipTests
 
 # === STAGE 2: RUNTIME ===
 # Nova etapa, usa apenas o Java Runtime (mais leve que Maven)
-FROM eclipse-temurin:21-jre
+FROM eclipse-temurin:17-jre-jammy
 
 # Define pasta de trabalho
 WORKDIR /app
