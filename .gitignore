@@ -1,0 +1,30 @@
+# Maven / Java
+target/
+*.log
+*.class
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# IDEs
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+.vscode/
+
+# OS files
+.DS_Store
+
+# Environment
+.env
+.env.local
+
+# Node
+node_modules/
+
+# Maven wrapper (should be committed if present)
+# keep .mvn and mvnw scripts in repo; do not ignore them
